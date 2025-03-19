@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import '../assets/styles/reset.css';
 import { useLocation, useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
@@ -41,36 +42,48 @@ const ResetPassword = () => {
   };
 
   return (
-    <div>
-      <h2>Reset Your Password</h2>
-      {error && <div >{error}</div>}
-      {success && <div >{success}</div>}
-      <form onSubmit={resetPasswordHandler}>
-        <div >
-          <label htmlFor="newPassword">New Password</label>
-          <input
-            type="password"
-            id="newPassword"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-            required
-          />
-        </div>
-
-        <div>
-          <label htmlFor="confirmPassword">Confirm Password</label>
-          <input
-            type="password"
-            id="confirmPassword"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-        </div>
-
-        <button type="submit">Reset Password</button>
-      </form>
+    <div className="reset-body">
+    <div className="reset-form-container">
+  <h2 className="reset-form-title">Reset Your Password</h2>
+  {error && <div className="reset-error-message">{error}</div>}
+  {success && <div className="success-message">{success}</div>}
+  
+  <form onSubmit={resetPasswordHandler}>
+    <div className="reset-form-group">
+      <label className="reset-label" htmlFor="newPassword">New Password:</label>
+      <input
+        type="password"
+        id="newPassword"
+        name="newPassword"
+        className="reset-input"
+        placeholder="Enter new password"
+        value={newPassword}
+        onChange={(e) => setNewPassword(e.target.value)}
+        required
+      />
+      <span className="error-message" id="newPasswordError"></span>
     </div>
+
+    <div className="form-group">
+      <label htmlFor="confirmPassword" className="reset-label">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        className="reset-input"
+        placeholder="Enter confirm password"
+        value={confirmPassword}
+        onChange={(e) => setConfirmPassword(e.target.value)}
+        required
+      />
+      <span className="error-message" id="confirmPasswordError"></span>
+    </div>
+
+    <button type="submit" className="reset-submit-button">Reset Password</button>
+  </form>
+</div>
+</div>
+
   );
 };
 

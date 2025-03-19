@@ -25,7 +25,7 @@ function App() {
         <Route path="/" element={<HomePage/>} />
           <Route path="/admin/loginForm" element={<LoginForm />} />
           <Route path="/admin/forgotPassword" element={<ForgotPassword />} />
-          <Route path="/admin/reset-password" element={<ResetPassword />} />
+          <Route path="/admin/resetpassword" element={<ResetPassword />} />
           <Route path="/admin/adminDashboard" element={<AdminDashboard />} />
           <Route path="/admin/addEvent" element={<AddEvent />} />
           <Route path="/admin/eventDetails" element={<EventDetails />} />

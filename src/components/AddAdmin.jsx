@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
+import '../assets/styles/AddAdmin.css';
 import { useNavigate } from 'react-router-dom';
 
 const AddAdmin = () => {
@@ -53,29 +54,61 @@ const AddAdmin = () => {
   };
 
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>Add Admin</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} required />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        </div>
-        <div>
-          <label>Confirm Password:</label>
-          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
-        </div>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit">Add Admin</button>
-      </form>
+    <div className="add-admin-form-container" style={{ padding: '20px', textAlign: 'center' }}>
+  <h1>Add Admin</h1>
+  <form onSubmit={handleSubmit} id="addAdminForm" className='add-admin-form'>
+    <div className="input-fields">
+      <div>
+        <label className='add-admin-label' htmlFor="username">Username:</label>
+        <input 
+          type="text" 
+          id="username" 
+          className="add-admin-form-input add-admin-input" 
+          value={username} 
+          onChange={(e) => setUsername(e.target.value)} 
+          required 
+        />
+      </div>
+      <div>
+        <label className='add-admin-label' htmlFor="email">Email:</label>
+        <input 
+          type="email" 
+          id="email" 
+          className="add-admin-form-input add-admin-input" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+          required 
+        />
+      </div>
+      <div>
+        <label className='add-admin-label' htmlFor="password">Password:</label>
+        <input 
+          type="password" 
+          id="password" 
+          className="add-admin-form-input add-admin-input" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+          required 
+        />
+      </div>
+      <div>
+        <label className='add-admin-label' htmlFor="confirmPassword">Confirm Password:</label>
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          className="add-admin-form-input add-admin-input" 
+          value={confirmPassword} 
+          onChange={(e) => setConfirmPassword(e.target.value)} 
+          required 
+        />
+      </div>
     </div>
+    
+    <p id="errorMessage" className="add-admin-error-text">{error}</p>
+    <button type="submit" className="add-admin-button">Add Admin</button>
+  </form>
+</div>
+
   );
 };
 

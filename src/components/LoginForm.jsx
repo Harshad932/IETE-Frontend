@@ -76,7 +76,7 @@ const handlePublicInputChange = (e) => {
   <button type="submit" className="login-submit-button">Login</button>
 
   <p className="login-forgot-password">
-    <a href="/ResetPassword" id="forgotPasswordLink" onClick={handleForgotPassword}>Forgot Password?</a>
+    <button id="forgotPasswordLink" onClick={handleForgotPassword}>Forgot Password?</button>
   </p>
 </form>
 </div>

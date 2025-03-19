@@ -1,4 +1,4 @@
-.login-main {
+.reset-body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
@@ -9,34 +9,36 @@
     height: 100vh;
 }
 
-.login-form-container {
+.reset-form-container {
+    
     width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    height:305px
 }
 
-.login-form-title {
+.reset-form-title {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
 }
 
-.login-form-group {
+.reset-form-group {
     margin-bottom: 20px;
 }
 
-.login-label {
+.reset-label {
     display: block;
     font-size: 16px;
     margin-bottom: 5px;
     color: #555;
 }
 
-.login-input {
+.reset-input {
     width: 100%;
     padding: 10px;
     font-size: 14px;
@@ -45,18 +47,18 @@
     box-sizing: border-box;
 }
 
-.login-input:focus {
+.reset-input:focus {
     outline: none;
     border-color: #1a76f3;
 }
 
-.login-error-message {
+.reset-error-message {
     color: red;
     font-size: 12px;
     display: none;
 }
 
-.login-submit-button {
+.reset-submit-button {
     width: 100%;
     padding: 10px;
     background-color: #1a76f3;
@@ -65,23 +67,24 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
-.login-submit-button:hover {
+.reset-submit-button:hover {
     background-color: #155cba;
 }
 
-.login-forgot-password {
+.reset-forgot-password {
     text-align: center;
     margin-top: 10px;
     font-size: 14px;
 }
 
-.login-forgot-password button {
+.reset-forgot-password a {
     color: #1a76f3;
     text-decoration: none;
 }
 
-.login-forgot-password button:hover {
+.reset-forgot-password a:hover {
     text-decoration: underline;
 }
